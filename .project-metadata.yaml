@@ -1,7 +1,6 @@
-name: Intelligent Writing Assistance with Text Style Transfer
+name: Concrete Classifier
 description: >-
-  Demonstration of how the NLP task of text style transfer can be applied 
-  to enhance the human writing experience.
+  Classify the good concretes and cracked concretes. Suggest similar images. Image segmentations.
 author: Cloudera Inc.
 specification_version: 1.0
 prototype_version: 2.0
