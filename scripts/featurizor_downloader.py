@@ -31,15 +31,15 @@ class Image_Featurizor_and_Uploader():
     example config_file:
 
     config = {
-    "apiKey": "AIzaSyDvKxjPAxyfb8RcGxn7bIRff4eH2xlmohE",
-    "authDomain": "test2-72fd2.firebaseapp.com",
-    "projectId": "test2-72fd2",
-    "storageBucket": "test2-72fd2.appspot.com",
-    "messagingSenderId": "851610909928",
-    "appId": "1:851610909928:web:5087fb5397bf4f4d521d5d",
-    "measurementId": "G-ZD52Q3E3G2",
-	  "serviceAccount":"serviceAccount.json",
-	"databaseURL": "https://test2-72fd2-default-rtdb.firebaseio.com/"
+        "apiKey": "AIzaSyDvKxjPAxyfb8RcGxn7bIRff4eH2xlmohE",
+        "authDomain": "test2-72fd2.firebaseapp.com",
+        "projectId": "test2-72fd2",
+        "storageBucket": "test2-72fd2.appspot.com",
+        "messagingSenderId": "851610909928",
+        "appId": "1:851610909928:web:5087fb5397bf4f4d521d5d",
+        "measurementId": "G-ZD52Q3E3G2",
+        "serviceAccount":"serviceAccount.json",
+        "databaseURL": "https://test2-72fd2-default-rtdb.firebaseio.com/"
     }
     
     
