@@ -51,6 +51,15 @@ class Image_classifier():
     return switcher.get(optimizer_name, Adam(learning_rate=learning_rate))
 
   def train_model(self, model_save_path):
+
+    """
+    Train the model and save the model to the specified path
+
+    model_save_path: (str) -> path to save the model
+
+    return none
+    
+    """
     
     # Import packages needed to create a imaage classification model
     import matplotlib.pyplot as plt
