@@ -18,27 +18,35 @@ import pandas as pd
 class Image_Featurizor_and_Uploader():
 
   def __init__(self, path, config_file, number_of_classes = 2):
+    """
+    This class creates the featurized csv which will be used to calculate the neighbor images
+    and while doing that process, images will be uploaded to the firebase.
+
+    To run this file, app/serviceAccount.json must be in your default environment.
+
+    path: (str) -> Path of the images used in training file
+    config_file: (dict) -> Firebase configuration details. (Attched below for reference)
+    number_of_classes: (int) -> Number of prediction classes
+
+    example config_file:
+
+    config = {
+    "apiKey": "AIzaSyDvKxjPAxyfb8RcGxn7bIRff4eH2xlmohE",
+    "authDomain": "test2-72fd2.firebaseapp.com",
+    "projectId": "test2-72fd2",
+    "storageBucket": "test2-72fd2.appspot.com",
+    "messagingSenderId": "851610909928",
+    "appId": "1:851610909928:web:5087fb5397bf4f4d521d5d",
+    "measurementId": "G-ZD52Q3E3G2",
+	  "serviceAccount":"serviceAccount.json",
+	"databaseURL": "https://test2-72fd2-default-rtdb.firebaseio.com/"
+    }
+    
+    
+    """
     self.path = path
     self.config_file = config_file
     self.classes = number_of_classes
-
-  def __get_optimizer(self,optimizer_name, learning_rate):
-    print("Getting the optimizer")
-    # Import keras optimizers
-    
-    print('Selected Optimizer', optimizer_name)
-    switcher = {
-        'Adadelta': Adadelta(lr=learning_rate),
-        'Adagrad': Adagrad(lr=learning_rate),
-        'Adam': Adam(lr=learning_rate),
-        'Adamax': Adamax(lr=learning_rate),
-        'FTRL': Ftrl(lr=learning_rate),
-        'NAdam': Nadam(lr=learning_rate),
-        'RMSprop': RMSprop(lr=learning_rate),
-        'Gradient Descent': SGD(lr=learning_rate)
-    }
-    # If optimizer_name is empty, Adam will be return as default optimizer
-    return switcher.get(optimizer_name, Adam(lr=learning_rate))
   
   def __create_dataframe(self, number_of_features, features, labels ):
 
@@ -111,6 +119,15 @@ class Image_Featurizor_and_Uploader():
     return data, labels
   
   def featurizer_and_uploader(self, save_path):
+
+    """
+    This method save the csv file while uploading the images to the firebase.
+
+    save_path: (str) -> path to save the csv fiel
+
+    return: pd.DataFrame
+    
+    """
 
     firebase = Firebase(self.config_file)
     storage = firebase.storage()
