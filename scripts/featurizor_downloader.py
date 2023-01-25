@@ -161,23 +161,23 @@ class Image_Featurizor_and_Uploader():
     print("CSV is saved to the {}".format(save_path))
     return dataframe
 
-if __name__ == "__main__":
-    PATH = 'path of the training images'
+# if __name__ == "__main__":
+#     PATH = 'path of the training images'
 
-    #your firebase credentials
-    config = {
-        "apiKey": "AIzaSyDvKxjPAxyfb8RcGxn7bIRff4eH2xlmohE",
-        "authDomain": "test2-72fd2.firebaseapp.com",
-        "projectId": "test2-72fd2",
-        "storageBucket": "test2-72fd2.appspot.com",
-        "messagingSenderId": "851610909928",
-        "appId": "1:851610909928:web:5087fb5397bf4f4d521d5d",
-        "measurementId": "G-ZD52Q3E3G2",
-        "serviceAccount":"serviceAccount.json",
-        "databaseURL": "https://test2-72fd2-default-rtdb.firebaseio.com/"
-    }
+#     #your firebase credentials
+#     config = {
+#         "apiKey": "AIzaSyDvKxjPAxyfb8RcGxn7bIRff4eH2xlmohE",
+#         "authDomain": "test2-72fd2.firebaseapp.com",
+#         "projectId": "test2-72fd2",
+#         "storageBucket": "test2-72fd2.appspot.com",
+#         "messagingSenderId": "851610909928",
+#         "appId": "1:851610909928:web:5087fb5397bf4f4d521d5d",
+#         "measurementId": "G-ZD52Q3E3G2",
+#         "serviceAccount":"serviceAccount.json",
+#         "databaseURL": "https://test2-72fd2-default-rtdb.firebaseio.com/"
+#     }
 
-    test = Image_Featurizor_and_Uploader(path = PATH, config_file = config)
-    #to upload the images to the firbase and save the csv
-    path_csv = "Path to save the csv"
-    test.featurizer_and_uploader(path_csv)
+#     test = Image_Featurizor_and_Uploader(path = PATH, config_file = config)
+#     #to upload the images to the firbase and save the csv
+#     path_csv = "Path to save the csv"
+#     test.featurizer_and_uploader(path_csv)
